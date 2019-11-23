@@ -1,14 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Link } from 'gatsby'
 import Layout from '../components/layout/Layout'
 
 
-export default class flyers extends Component {
-    render () {
+
+    const Flyer = () => {
         return (
             <Layout>
-                hello fom Flyer pages
+                hello fom Flyer pages <Link to="/about">hello</Link>
             </Layout>
 
         )
     }
-}
+
+    export default Flyer

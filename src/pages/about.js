@@ -4,7 +4,7 @@ import Layout from '../components/layout/Layout'
 export default function About () {
     return (
         <Layout>
-            hello fom about pagesasdewefwefwefwsdfgsrfg
+            hello fom about pages vowel
         </Layout>
     )
 }

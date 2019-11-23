@@ -5,7 +5,20 @@
  */
 
 module.exports = {
-  plugins: [`gatsby-plugin-sass`,
-  `gatsby-plugin-styled-components`]
-     
+    siteMetadata:{
+      title: "Liquor Baron",
+      description:"Explore the newest liquor store in Alberta",
+      author:"@YOURDEVVY",
+    },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`
+  ], 
 }
