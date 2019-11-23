@@ -8,6 +8,7 @@ import Services from "../components/home/services"
 
 
 export default () => {
+    return (
         <Layout>
             <SimpleHero>
                 <Banner 
