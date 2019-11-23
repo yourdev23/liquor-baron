@@ -1,14 +1,13 @@
 import React from 'react'
 import {Link} from "gatsby"
 import Layout from '../components/layout/Layout'
-import SimpleHero from "../components/heros/Simplehero"
+import SimpleHero from "../components/heros/SimpleHero"
 import Banner from "../components/banner/banner"
 import About from "../components/home/about-home"
 import Services from "../components/home/services"
 
 
 export default () => {
-    return (
         <Layout>
             <SimpleHero>
                 <Banner 
