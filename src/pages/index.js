@@ -3,7 +3,7 @@ import {Link} from "gatsby"
 import Layout from '../components/layout/Layout'
 import SimpleHero from "../components/heros/Simplehero"
 import Banner from "../components/banner/banner"
-import About from "../components/home/about"
+import About from "../components/home/about-home"
 import Services from "../components/home/services"
 
 
