@@ -2,14 +2,16 @@ import React, {Component} from 'react'
 import Layout from '../components/layout/Layout'
 import StyledHero from "../components/heros/StyledHero"
 import {graphql} from 'gatsby'
+import Flyers from '../components/Flyers/flyers.component'
 
 
 
-    export default class Flyers extends Component {
+    export default class FlyerPage extends Component {
         render(){
             return (
                 <Layout>
                     <StyledHero img={this.props.data.LiquorB.childImageSharp.fluid}/>
+                    <Flyers/>
                 </Layout>
             )
         }

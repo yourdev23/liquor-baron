@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styles from "./footer.module.css"
 import links from '../../constants/links'
 import socialIcons from '../../constants/social-icons'

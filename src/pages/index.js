@@ -5,7 +5,8 @@ import About from "../components/home/about-home"
 import Services from "../components/home/services"
 import StyledHero from "../components/heros/StyledHero"
 import {graphql} from 'gatsby'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import FeaturedFlyers from "../components/home/featuredFlyers"
 
 
 export default ({data}) => {
@@ -23,6 +24,7 @@ export default ({data}) => {
                 </StyledHero>
             <About />
             <Services />
+            <FeaturedFlyers/>
         </Layout>
     )
 }

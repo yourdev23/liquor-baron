@@ -1,5 +1,4 @@
 import React,{useState} from "react"
-import { Link } from "gatsby"
 import { FaAlignRight } from "react-icons/fa"
 import styles from "./navbar.module.css"
 import links from '../../constants/links'
