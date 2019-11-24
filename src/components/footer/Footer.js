@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styles from "./footer.module.css"
 import links from '../../constants/links'
 import socialIcons from '../../constants/social-icons'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 
 
@@ -13,9 +14,9 @@ const Footer = () => {
             <div className={styles.links}>
                 {links.map((item, index) => {
                     return (
-                        <Link key={index} to={item.path}>
+                        <AniLink fade key={index} to={item.path}>
                         {item.text}
-                        </Link>
+                        </AniLink>
                     )
                 })}
             </div>

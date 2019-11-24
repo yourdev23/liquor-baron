@@ -1,27 +1,41 @@
 import React from 'react'
-import {Link} from "gatsby"
 import Layout from '../components/layout/Layout'
-import SimpleHero from "../components/heros/SimpleHero"
 import Banner from "../components/banner/banner"
 import About from "../components/home/about-home"
 import Services from "../components/home/services"
+import StyledHero from "../components/heros/StyledHero"
+import {graphql} from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 
-export default () => {
+export default ({data}) => {
     return (
         <Layout>
-            <SimpleHero>
+            <StyledHero home="true" img={data.LiquorB.childImageSharp.fluid}>
                 <Banner 
                 title="Welcome to our store" 
                 info="Lsabnnsadn andnand ioanhsdolnad jnaosdnand nasdnan oansdolnasnd"
                  >
-                 <Link to="/flyers" className="btn-white">
+                 <AniLink fade to="/flyers" className="btn-white">
                     explore offers
-                 </Link>
+                 </AniLink>
                 </Banner>
-            </SimpleHero>
+                </StyledHero>
             <About />
             <Services />
         </Layout>
     )
 }
+
+
+export const query = graphql `
+query{
+  LiquorB:file(relativePath:{eq:"liqourBarrels-min.jpeg"}){
+    childImageSharp{
+      fluid(quality:90, maxWidth:4160){
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
+  }
+}
+`

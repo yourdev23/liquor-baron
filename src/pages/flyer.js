@@ -1,16 +1,28 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, {Component} from 'react'
 import Layout from '../components/layout/Layout'
+import StyledHero from "../components/heros/StyledHero"
+import {graphql} from 'gatsby'
 
 
 
-    const Flyer = () => {
-        return (
-            <Layout>
-                hello fom Flyer pages <Link to="/about">hello</Link>
-            </Layout>
-
-        )
+    export default class Flyers extends Component {
+        render(){
+            return (
+                <Layout>
+                    <StyledHero img={this.props.data.LiquorB.childImageSharp.fluid}/>
+                </Layout>
+            )
+        }
     }
-
-    export default Flyer
+   
+    export const query = graphql `
+    query{
+      LiquorB:file(relativePath:{eq:"liqourBarrels-min.jpeg"}){
+        childImageSharp{
+          fluid(quality:90, maxWidth:4160){
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    `
